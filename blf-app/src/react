@@ -1,0 +1,171 @@
+import React, { useState } from 'react';
+import { 
+  Bell, Shield, Users, Calendar, Phone,
+  HeartHandshake, BookOpen, Map, AlertCircle,
+  FileText, Gavel, FileCheck, ClipboardList,
+  Building2, Clock, DollarSign, HelpCircle,
+  BadgeHelp, FileSearch, Heart, Building,
+  Scale
+} from 'lucide-react';
+import { 
+  Alert,
+  AlertDescription,
+  AlertTitle 
+} from '@/components/ui/alert';
+
+const LibertationApp = () => {
+  const [currentView, setCurrentView] = useState('home');
+
+  // Emergency Alert Banner
+  const EmergencyBanner = () => (
+    <Alert className="bg-red-100 border-red-500 mb-4">
+      <AlertCircle className="w-4 h-4 text-red-500" />
+      <AlertTitle className="text-red-700">Emergency Support</AlertTitle>
+      <AlertDescription className="text-red-600">
+        24/7 Crisis Line: 1-800-XXX-XXXX
+        <br />
+        Tap for immediate resources
+      </AlertDescription>
+    </Alert>
+  );
+
+  // Main Navigation Menu
+  const MainMenu = () => (
+    <div className="grid grid-cols-2 gap-4 p-4">
+      {[
+        {
+          icon: <HeartHandshake className="w-8 h-8 text-purple-600" />,
+          title: "Get Support",
+          desc: "Access immediate assistance"
+        },
+        {
+          icon: <Gavel className="w-8 h-8 text-blue-600" />,
+          title: "Legal Tools",
+          desc: "Court Support & Documents"
+        },
+        {
+          icon: <FileCheck className="w-8 h-8 text-green-600" />,
+          title: "Expungement",
+          desc: "Clear Your Record"
+        },
+        {
+          icon: <ClipboardList className="w-8 h-8 text-red-600" />,
+          title: "Parole",
+          desc: "Resources & Tracking"
+        },
+        {
+          icon: <Shield className="w-8 h-8 text-indigo-600" />,
+          title: "Victim Services",
+          desc: "Support & Resources"
+        },
+        {
+          icon: <DollarSign className="w-8 h-8 text-yellow-600" />,
+          title: "Bail Support",
+          desc: "Emergency assistance"
+        },
+        {
+          icon: <HelpCircle className="w-8 h-8 text-pink-600" />,
+          title: "Disability",
+          desc: "Accessible support"
+        },
+        {
+          icon: <Building className="w-8 h-8 text-orange-600" />,
+          title: "Housing",
+          desc: "Emergency & rights"
+        },
+        {
+          icon: <Scale className="w-8 h-8 text-blue-600" />,
+          title: "Social Justice",
+          desc: "Community action"
+        },
+        {
+          icon: <Heart className="w-8 h-8 text-purple-600" />,
+          title: "Spiritual",
+          desc: "Faith-based support"
+        },
+        {
+          icon: <Users className="w-8 h-8" />,
+          title: "Community",
+          desc: "Connect safely"
+        },
+        {
+          icon: <BookOpen className="w-8 h-8" />,
+          title: "Resources",
+          desc: "Find information"
+        },
+        {
+          icon: <Map className="w-8 h-8" />,
+          title: "Services Map",
+          desc: "Locate nearby help"
+        },
+        {
+          icon: <Shield className="w-8 h-8" />,
+          title: "Safety Plan",
+          desc: "Create & update"
+        }
+      ].map((item, index) => (
+        <button
+          key={index}
+          className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow hover:bg-gray-50"
+          onClick={() => setCurrentView(item.title.toLowerCase())}
+        >
+          {item.icon}
+          <h3 className="mt-2 font-medium">{item.title}</h3>
+          <p className="text-sm text-gray-600">{item.desc}</p>
+        </button>
+      ))}
+    </div>
+  );
+
+  // Quick Exit Button
+  const QuickExit = () => (
+    <button 
+      className="fixed top-4 right-4 bg-red-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-red-600"
+      onClick={() => window.location.href = "https://weather.com"}
+    >
+      Quick Exit
+    </button>
+  );
+
+  // Accessibility Controls
+  const AccessibilityControls = () => (
+    <div className="fixed bottom-4 left-4 flex gap-2">
+      <button className="p-2 bg-gray-200 rounded-full" aria-label="Increase text size">
+        A+
+      </button>
+      <button className="p-2 bg-gray-200 rounded-full" aria-label="Decrease text size">
+        A-
+      </button>
+      <button className="p-2 bg-gray-200 rounded-full" aria-label="Toggle high contrast">
+        <Shield className="w-4 h-4" />
+      </button>
+    </div>
+  );
+
+  return (
+    <div className="min-h-screen bg-gray-100 relative">
+      <QuickExit />
+      
+      <header className="bg-purple-600 text-white p-4">
+        <h1 className="text-xl font-bold">Black Liberation Fund</h1>
+        <p className="text-sm">Community Support & Resources</p>
+      </header>
+
+      <main className="max-w-lg mx-auto p-4">
+        <EmergencyBanner />
+        <MainMenu />
+      </main>
+
+      <AccessibilityControls />
+      
+      {/* Footer with additional safety info */}
+      <footer className="bg-gray-800 text-white p-4 mt-8">
+        <p className="text-sm text-center">
+          This app uses secure browsing. Clear your history for additional privacy.
+        </p>
+      </footer>
+    </div>
+  );
+};
+
+export default LibertationApp;

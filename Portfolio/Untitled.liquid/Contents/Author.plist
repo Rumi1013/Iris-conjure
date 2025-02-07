@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>course</key>
+	<string></string>
+	<key>doiPublishedBy</key>
+	<string></string>
+	<key>isbn</key>
+	<string></string>
+	<key>module</key>
+	<string></string>
+	<key>teacher</key>
+	<string></string>
+	<key>title</key>
+	<string>Untitled</string>
+</dict>
+</plist>

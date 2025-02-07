@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AuthorBundleVersion</key>
+	<string>1436</string>
+	<key>FontSizeModifier</key>
+	<real>17</real>
+	<key>FormatVersion</key>
+	<real>8.1099999999999994</real>
+	<key>Kind</key>
+	<string>standard</string>
+	<key>LastOpenedBy</key>
+	<string>macOS</string>
+	<key>PublishCitationFormat</key>
+	<string>leaveAsIs</string>
+	<key>PublishHeadingFormat</key>
+	<string>references</string>
+	<key>Type</key>
+	<string>readwrite</string>
+</dict>
+</plist>

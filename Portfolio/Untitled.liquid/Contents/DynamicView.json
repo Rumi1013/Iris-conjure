@@ -1,0 +1,29 @@
+{
+  "connections" : [
+
+  ],
+  "layout" : {
+    "nodePositions" : {
+      "CB9E925D-BD16-4C02-9449-83A43F37F506" : {
+        "x" : 0,
+        "y" : 0
+      }
+    }
+  },
+  "settings" : {
+    "hiddenTags" : [
+
+    ],
+    "shouldShowHiddenNodes" : false,
+    "nodeVisibility" : "showAll"
+  },
+  "nodes" : [
+    {
+      "type" : "text",
+      "title" : "Type anything, then hit 'enter' and double click anywhere to type more.",
+      "identifier" : "CB9E925D-BD16-4C02-9449-83A43F37F506",
+      "isHidden" : false,
+      "isStruckthrough" : false
+    }
+  ]
+}
